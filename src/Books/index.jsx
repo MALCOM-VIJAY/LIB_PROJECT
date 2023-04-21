@@ -4,7 +4,7 @@ import Table from '../Table';
 import {IoCaretBackCircleOutline} from 'react-icons/io5'
 import { Link } from "react-router-dom"
 import './Books.css';
-
+//The functionality of the search bar
 const Books = () =>{
   const [query, setQuery] = useState("");
   const [keys,setKey] = useState(["title"]);
@@ -13,6 +13,7 @@ const Books = () =>{
       keys.some((key) => item[key].toLowerCase().includes(query))
     );
   };
+  //Drop down menu of the search bar
 return (
   <div className="Books">
     <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
@@ -36,6 +37,4 @@ return (
   </div>
 );
 }
-    
-
 export default Books;

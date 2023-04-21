@@ -1,3 +1,4 @@
+// imports
 import React,{useState} from "react";
 import Preloader from "../Preloader";
 import "./Landpage.scss";
@@ -10,16 +11,17 @@ const Landpage = () =>{
     },3000);
     return(
         (loaded)?
+        // Home page text and image
         <div className="Landpage">
-
             <div className="img">
                 <img src={img} alt="img" />
             </div>
             <div className="content">
                 <h1 data-aos="fade-left">Library <span>Managment</span></h1>
                 <p data-aos="fade-left">An Automated And Digital Way Of Mantaining Books</p>
+                {/* Button linked to the next table page*/}
                 <Link to='/library'>
-                    <button>Browse Books</button>
+                    <button>Browse Books</button>    
                 </Link>
             </div>
         </div>:<Preloader/>

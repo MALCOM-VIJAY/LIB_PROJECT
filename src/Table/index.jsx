@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import "./Table.css"
 const Table = ({data}) =>{
+    // Pagination(Pagination of the table to move next set of data)
     const[currentPage,setCurrentPage] = useState(1)
     const recordsPerPage=10;
     const lastIndex = currentPage * recordsPerPage;
@@ -9,6 +10,7 @@ const Table = ({data}) =>{
     const npage=Math.ceil(data.length/recordsPerPage);
     const numbers =[...Array(npage+1).keys()].slice(1)
     return (
+      // Table html names and data exportation
       <div>
         <main className="table">
         <table>
@@ -17,7 +19,6 @@ const Table = ({data}) =>{
             <th>Author</th>
             <th>Subject</th>
             <th>Published-Date</th>
-            {/* <th>Url</th> */}
           </thead>
           <tbody>
             {records.map((d,i)=>(
@@ -26,14 +27,13 @@ const Table = ({data}) =>{
                 <td>{d.author}</td>
                 <td>{d.subject}</td>
                 <td>{d.date}</td>
-                {/* <td>{d.imageurl}</td> */}
-                
               </tr>
             ))}
           </tbody>
         </table>
         </main>
         <nav>
+          {/* Next and prev buttons of the table are declared here*/}
           <ul className="pagination">
             <li className='page-item'>
               <a href="#" className='page-link' onClick={prePage}>Prev</a>
@@ -53,6 +53,7 @@ const Table = ({data}) =>{
         </nav>
       </div>
     )
+    // The functions of the count are declared are for the count of 10
     function prePage(){
       if(currentPage !== firstIndex && currentPage > 1){
         setCurrentPage(currentPage-1)

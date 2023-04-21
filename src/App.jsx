@@ -4,7 +4,7 @@ import Landpage from './Landpage';
 import Books from './Books';
 import Preloader from './Preloader';
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
-
+//Main routing page
 function App() {
   return(
   <BrowserRouter>
