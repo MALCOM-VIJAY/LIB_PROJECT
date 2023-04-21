@@ -1,0 +1,52 @@
+.Landpage{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .img{
+        flex: 1;
+    }
+    .logo{
+        height: 80px;
+        display: flex;
+        align-items: baseline;
+        justify-content: start;
+
+    }
+    .content{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h1{
+            font-size: 70px;
+            span{
+                color:#00b0ff;
+            }
+        }
+        p{
+            opacity: 0.7;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        button{
+            margin-top: 40px;
+            height: 35px;
+            width: 150px;
+            border: none;
+            outline: none;
+            border-radius: 15px;
+            background-color:#00b0ff;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                transition: all 0.2s linear;
+                background-color: white;
+                color: #00b0ff;
+                border: 1px solid #00b0ff;
+            }
+        }
+    }
+}

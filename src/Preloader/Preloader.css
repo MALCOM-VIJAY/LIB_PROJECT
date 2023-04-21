@@ -1,0 +1,25 @@
+.Preloader{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.loader{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border-bottom: 3px solid #00b0ff;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: linear;
+}
+
+@keyframes spin {
+    50%{
+        transform: rotate(360deg);
+    }
+}
