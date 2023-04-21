@@ -1,6 +1,5 @@
 import React,{useState} from "react";
 import "./Table.css"
-
 const Table = ({data}) =>{
     const[currentPage,setCurrentPage] = useState(1)
     const recordsPerPage=10;
